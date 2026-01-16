@@ -1,0 +1,212 @@
+:: StoryTitle
+TheMission
+
+
+:: StoryData
+{
+  "ifid": "3274EF69-FC30-4144-BCBB-80EAF2B73A01",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Scenario",
+  "zoom": 1
+}
+
+
+:: Aftermath1 {"position":"4100,600","size":"100,100"}
+Confused, she turns to where the man was just standing.
+As she turns, I get a glimpse of her face. The blood splatter got her good. It's dripping down her face and on to the pavement.
+
+Her shirt and pants, once pink and blue respectively, are now the same deep shade of red.
+
+She looks down at what is now a lifeless corpse.
+I read the words off her lips.
+
+"Daddy?"
+
+My phone buzzes.
+
+[[Check phone->MissionComplete]]
+
+
+:: Aftermath2 {"position":"4100,800","size":"100,100"}
+Without a second's hesitation, the man grabs his daughter and breaks for the SUV he arrived in. He nearly rips the door off its hinges, throws his daughter inside, and leaps in after her.
+
+The SUV takes off and I quickly lose visual.
+
+My phone buzzes.
+
+[[Check phone->MissionFailed]]
+
+
+:: CallBoss {"position":"2400,800","size":"100,100"}
+I pull back from my rifle for the first time in fifteen minutes, pull out my phone, and dial Boss.
+
+It rings.
+It rings again.
+It rings a third time, and then...
+
+Silence.
+
+[[Boss?->PhoneCall1]]
+
+
+:: FinalDecision {"position":"3400,800","size":"100,100"}
+I focus back up into the scope of my rifle. It's now or never.
+
+[[Take the shot, hit him.->Kill]]
+[[Take the shot, miss him.->Spare]]
+
+
+:: Focus {"position":"1200,800","size":"100,100"}
+I try to slow my breathing and focus, though the sizzling air is working tirelessly against me. Checking my pulse, it's a tad higher than the ideal sixty beats per minute, instead hovering at around seventy-five. Damn. Can't screw this one up, Rohan.
+
+[[Continue...->TimeCheck]] 
+
+
+:: Height {"position":"1200,1000","size":"100,100"}
+I look down toward the asphalt grid below. It's a long way down. Thirty stories at least. Not great. I'd like to avoid a repeat of Budapest if possible. Shit got out of hand real quick back then.
+
+[[Continue...->TimeCheck]] 
+
+
+:: Indecisive {"position":"2200,600","size":"100,100"}
+I start applying pressure to the trigger, but someting stops me from pulling it all the way.
+
+This doesn't feel right.
+
+[[Shake it off and squeeze.->Kill]]
+[[I should call Boss.->CallBoss]]
+
+
+:: Kill {"position":"3900,600","size":"100,100"}
+BANG.
+
+I squeeze the trigger, and a single shot rings out.
+Everyone in a two hundred foot radius flinches.
+His body ragdolls as the impact of the shot throws him five or six feet forward.
+
+I see the child.
+
+[[Continue...->Aftermath1]]
+
+
+:: Meandering {"position":"1600,800","size":"100,100"}
+Minutes pass, and while waiting I notice all the parkgoers happily going about their day. Some are with their partners, some are pushing strollers, and some are sitting sipping iced tea. Pity. None of them have any idea that the entire park is about to be an active crime scene. Oh well, used to be me. Before all this.
+
+And as if on cue, the red SUV pulls up to the park. The left rear passenger door opens, and out steps our man. I lock my aim to his forehead as he walks around the vehicle. Easy shot. But then, he opens the right rear passenger door, and...
+
+What the hell...?
+
+[[Continue...->Twist]] 
+
+
+:: MissionComplete {"position":"4300,600","size":"100,100"}
+A single text message. It's from Boss.
+
+"Excellent work. Drinks are on me tonight. 9pm. You know the spot."
+
+
+:: MissionFailed {"position":"4300,800","size":"100,100"}
+A single text message. It's from Boss.
+
+"You disappoint me. We're done."
+
+
+:: PhoneCall1 {"position":"2600,800","size":"100,100"}
+A cold woman's voice responds.
+
+(text-colour:red)["Is it done?"]
+
+[[No->PhoneCall2A]]
+[[There's a complication->PhoneCall2B]]
+
+
+:: PhoneCall2A {"position":"2800,700","size":"100,100"}
+(text-colour:red)["And why not?"]
+
+[[Guy brought his fucking daughter along->PhoneCall3]]
+
+
+:: PhoneCall2B {"position":"2800,900","size":"100,100"}
+(text-colour:red)["What could possibly be so complicated about putting a bullet through his skull?"]
+
+[[Guy brought his fucking daughter along->PhoneCall3]]
+
+
+:: PhoneCall3 {"position":"3000,800","size":"100,100"}
+(text-colour:red)["And? I pay you to kill people, not run a daycare. That's how this works, remember? I give you names of people, those people die, and the Department gives you money."]
+
+(text-colour:red)["Take the shot, Rohan. This is the job."]
+
+[[Fine, but I want a bonus for this.->PhoneCall4A]]
+[[I'm in the business of assassinating people, not traumatizing little girls. This wasn't part of the plan.->PhoneCall4B]]
+
+
+
+:: PhoneCall4A {"position":"3200,700","size":"100,100"}
+(text-colour:red)["Your bonus is that you remain employed with us."]
+
+The line goes dead.
+
+[[Fuck.->FinalDecision]]
+
+
+:: PhoneCall4B {"position":"3200,900","size":"100,100"}
+(text-colour:red)["You of all people should know things don't always go according to plan. After Budapest, I thought you'd have learned how to adapt when that happens."]
+
+(text-colour:red)["This is our one shot. You either get him today or he's in the wind."]
+
+The line goes dead.
+
+[[Fuck.->FinalDecision]]
+
+
+:: Scenario {"position":"1000,800","size":"100,100"}
+I lie prone on the rooftop, my back to the sky, and the scorching summer sun reveals itself from behind the clouds once again. A few beads of sweat streak down the back of my neck as I fiddle with the scope of my rifle.
+
+[[Wipe the sweat away->Wipe]]
+[[Try to focus->Focus]] 
+[[Check height->Height]] 
+
+
+:: Spare {"position":"3900,800","size":"100,100"}
+BANG.
+
+I squeeze the trigger, and a single shot rings out.
+Everyone in a two hundred foot radius flinches.
+
+The concrete path in front of the man explodes as the bullet strikes it.
+
+[[Continue...->Aftermath2]]
+
+
+:: TakeAim {"position":"2000,600","size":"100,100"}
+Fuck it, orders are orders. This is the mission. This is the job. Guy wants his daughter to see his head pop like a tomato thrown against a wall? Not my problem.
+
+I take deadly aim and a deep breath.
+
+[[Pull the trigger->Kill]]
+[[No, wait->Indecisive]]
+
+
+:: TimeCheck {"position":"1400,800","size":"100,100"}
+I glance briefly at my watch before I park my gaze back within my scope. It should be any moment now. One more name off the list.
+
+[[Continue->Meandering]] 
+
+
+:: Twist {"position":"1800,800","size":"100,100"}
+...A child steps out of the vehicle.
+
+The child, easily no older than eight, runs to the man who picks her up and, with a smile, squeezes her tight before putting her back down. He takes her hand and they start walking.
+
+Son of a bitch brought his daughter to his own assassination.
+
+[[Focus up and aim->TakeAim]]
+[[Call this in to Boss->CallBoss]]
+
+
+:: Wipe {"position":"1200,600","size":"100,100"}
+I wipe the sweat from my neck and forehead. Much better, but there's more where that came from and it won't take very long. Yuck. I hate this part of the job.
+
+[[Continue...->TimeCheck]] 
